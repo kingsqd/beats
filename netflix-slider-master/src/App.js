@@ -5,39 +5,39 @@ import './App.scss'
 const movies = [
   {
     id: 1,
-    image: '/images/slide1.jpg',
-    imageBg: '/images/slide1b.webp',
-    title: '1983'
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso'
   },
   {
     id: 2,
-    image: '/images/slide2.jpg',
-    imageBg: '/images/slide2b.webp',
-    title: 'Russian doll'
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso'
   },
   {
     id: 3,
-    image: '/images/slide3.jpg',
-    imageBg: '/images/slide3b.webp',
-    title: 'The rain',
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso',
   },
   {
     id: 4,
-    image: '/images/slide4.jpg',
-    imageBg: '/images/slide4b.webp',
-    title: 'Sex education'
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso'
   },
   {
     id: 5,
-    image: '/images/slide5.jpg',
-    imageBg: '/images/slide5b.webp',
-    title: 'Elite'
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso'
   },
   {
     id: 6,
-    image: '/images/slide6.jpg',
-    imageBg: '/images/slide6b.webp',
-    title: 'Black mirror'
+    image: '/images/ELSummer.jpg',
+    imageBg: '/images/iso3.png',
+    title: 'Iso'
   }
 ];
 
