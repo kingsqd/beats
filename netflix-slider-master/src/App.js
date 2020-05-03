@@ -1,55 +1,13 @@
 import React, { Component } from 'react';
-import Slider from './components/NetflixSlider'
-import './App.scss'
+import RootSlider from './components/NetflixSlider/RootSlider'
 
-const movies = [
-  {
-    id: 1,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso'
-  },
-  {
-    id: 2,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso'
-  },
-  {
-    id: 3,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso',
-  },
-  {
-    id: 4,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso'
-  },
-  {
-    id: 5,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso'
-  },
-  {
-    id: 6,
-    image: '/images/ELSummer.jpg',
-    imageBg: '/images/iso3.png',
-    title: 'Iso'
-  }
-];
+import './App.scss'
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Slider>
-          {movies.map(movie => (
-            <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
-          ))}
-        </Slider>
+        <RootSlider></RootSlider>
       </div>
     );
   }
