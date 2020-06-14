@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from './'
+import axios from 'axios';
 
 const movies = [
   {
@@ -40,8 +41,19 @@ const movies = [
   }
 ];
 
-class RootSlider extends Component {
-  render() {
+const RootSlider = () =>  {
+    const [beats, setBeats] = useState([]);
+    
+    useEffect(() => {
+      async function fetchData() {
+        const result = await axios(
+          'http://localhost:8000/beats',
+        );
+        console.log(result.data.Contents);
+        setBeats(result.data.Contents);
+      }
+      fetchData();
+    }, []); 
     return (
       <div>
         <Slider>
@@ -51,7 +63,7 @@ class RootSlider extends Component {
         </Slider>
       </div>
     );
-  }
+
 }
 
 export default RootSlider;
