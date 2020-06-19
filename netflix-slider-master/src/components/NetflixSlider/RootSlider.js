@@ -43,24 +43,34 @@ const movies = [
 
 const RootSlider = () =>  {
     const [beats, setBeats] = useState([]);
-    
+    const [isLoading, setIsLoading] = useState(false);
+
     useEffect(() => {
       async function fetchData() {
+        setIsLoading(true);
         const result = await axios(
           'http://localhost:8000/beats',
         );
         console.log(result.data.Contents);
         setBeats(result.data.Contents);
+        console.log(movies)
+        setIsLoading(false);
       }
       fetchData();
     }, []); 
+    
     return (
       <div>
+      {isLoading ? (
+        <div>Loading ...</div>
+      ) : (
         <Slider>
-          {movies.map(movie => (
-            <Slider.Item movie={movie} key={movie.id}>item1</Slider.Item>
+          {beats.map(movie => (
+            <Slider.Item movie={movie} key={movie.Key}>item1</Slider.Item>
           ))}
         </Slider>
+      )}
+        
       </div>
     );
 

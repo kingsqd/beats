@@ -8,7 +8,7 @@ import './Item.scss'
 const Item = ({ movie }) => (
   <SliderContext.Consumer>
     {({ onSelectSlide, currentSlide, elementRef }) => {
-      const isActive = currentSlide && currentSlide.id === movie.id;
+      const isActive = currentSlide && currentSlide.id === movie.Key;
 
       return (
         <div
@@ -17,7 +17,7 @@ const Item = ({ movie }) => (
             'item--open': isActive,
           })}
         >
-          <img src={movie.image} alt="" />
+          <img src={'/images/ELSummer.jpg'} alt="" />
           <ShowDetailsButton onClick={() => onSelectSlide(movie)} />
           {isActive && <Mark />}
         </div>
